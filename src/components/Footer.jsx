@@ -14,7 +14,7 @@ export default function Footer() {
           <a href="#pricing" className="text-xs font-medium text-white/25 transition-colors hover:text-white/50">
             Pricing
           </a>
-          <a href="#privacy" className="text-xs font-medium text-white/25 transition-colors hover:text-white/50">
+          <a href="/privacy" className="text-xs font-medium text-white/25 transition-colors hover:text-white/50">
             Privacy
           </a>
           <a
