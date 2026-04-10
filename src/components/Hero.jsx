@@ -13,9 +13,18 @@ export default function Hero() {
       {/* Gradient overlay */}
       <div className="absolute inset-0 z-[1] bg-gradient-to-t from-bg via-bg/60 to-transparent" />
 
-      {/* Content */}
+      {/* Mobile image — sits at the top, below the navbar */}
+      <FadeUp className="relative z-10 flex justify-center pt-28 pb-2 md:hidden">
+        <img
+          src={`${import.meta.env.BASE_URL}hero-phones.png`}
+          alt="LiftZone Workouts app screens"
+          className="max-h-[260px] w-full object-contain drop-shadow-2xl"
+        />
+      </FadeUp>
+
+      {/* Content — pushed to bottom on desktop, normal flow on mobile */}
       <div className="relative z-10 mt-auto w-full px-5 pb-16 md:px-10 md:pb-24">
-        <div className="mx-auto grid max-w-[80rem] items-end gap-12 md:grid-cols-2 md:gap-8">
+        <div className="mx-auto grid max-w-[80rem] items-end gap-8 md:grid-cols-2">
 
           {/* Left — text */}
           <div>
@@ -71,12 +80,12 @@ export default function Hero() {
             </FadeUp>
           </div>
 
-          {/* Right — phones mockup */}
-          <FadeUp delay={2} className="flex items-center justify-center md:items-end md:justify-center">
+          {/* Right — desktop only */}
+          <FadeUp delay={2} className="hidden md:flex md:items-end md:justify-center">
             <img
               src={`${import.meta.env.BASE_URL}hero-phones.png`}
               alt="LiftZone Workouts app screens"
-              className="w-full max-w-[320px] animate-float object-contain drop-shadow-2xl md:max-w-[620px]"
+              className="w-full max-w-[620px] animate-float object-contain drop-shadow-2xl"
             />
           </FadeUp>
 
