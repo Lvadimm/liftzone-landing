@@ -1,5 +1,5 @@
 const items = [
-  "AI Workout Plans",
+  "Personalized Workout Plans",
   "Food Scanner",
   "Apple Watch",
   "Strength Analytics",

@@ -58,7 +58,7 @@ export default function Hero() {
 
             <FadeUp delay={3}>
               <p className="mt-6 text-sm text-white/30">
-                Free to download. 2 weeks of Pro included. No commitment.
+                Free forever. 2 weeks of Pro included. No account required.
               </p>
             </FadeUp>
 
@@ -72,11 +72,11 @@ export default function Hero() {
           </div>
 
           {/* Right — phones mockup */}
-          <FadeUp delay={2} className="hidden md:flex md:items-end md:justify-center">
+          <FadeUp delay={2} className="flex items-center justify-center md:items-end md:justify-center">
             <img
               src={`${import.meta.env.BASE_URL}hero-phones.png`}
               alt="LiftZone Workouts app screens"
-              className="w-full max-w-[620px] animate-float object-contain drop-shadow-2xl"
+              className="w-full max-w-[320px] animate-float object-contain drop-shadow-2xl md:max-w-[620px]"
             />
           </FadeUp>
 

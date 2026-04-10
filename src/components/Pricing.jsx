@@ -14,7 +14,7 @@ const freeFeatures = [
 ];
 
 const proFeatures = [
-  "AI-generated workout plans",
+  "Workout plans tailored to your profile",
   "AI food scanner (camera)",
   "Voice meal logging",
   "Full plan customization",
@@ -55,8 +55,8 @@ export default function Pricing() {
             <span className="text-white/35">Pro when you're ready.</span>
           </h2>
           <p className="mt-4 max-w-md text-base text-white/40">
-            Everything you need to train and track is free. Upgrade to Pro for
-            AI-powered coaching and nutrition scanning.
+            Every core feature is free — no expiry, no account required.
+            Pro adds smart tools for those who want to go further.
           </p>
         </FadeUp>
 
@@ -65,9 +65,9 @@ export default function Pricing() {
           <FadeUp delay={1}>
             <div className="glass-strong flex h-full flex-col rounded-3xl p-8 md:p-10">
               <div className="mb-6">
-                <h3 className="text-xl font-semibold">Free</h3>
+                <h3 className="text-xl font-semibold">Free Forever</h3>
                 <p className="mt-1 text-sm text-white/40">
-                  No account required. No time limit.
+                  No account required. No expiry. Yours to keep.
                 </p>
               </div>
 
