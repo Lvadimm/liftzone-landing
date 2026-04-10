@@ -15,6 +15,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <script>
+      // Redirect #privacy anchor to the real privacy page
+      if (window.location.hash === '#privacy') {
+        window.location.replace('https://www.liftzoneworkouts.com/privacy');
+      }
+      document.addEventListener('click', function(e) {
+        var a = e.target.closest('a[href="#privacy"]');
+        if (a) {
+          e.preventDefault();
+          window.location.href = 'https://www.liftzoneworkouts.com/privacy';
+        }
+      });
+    </script>
     <script type="module" crossorigin src="/assets/index-i-fLB8TX.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-B_mU_OC1.css">
   </head>
