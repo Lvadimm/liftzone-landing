@@ -155,65 +155,161 @@
 
         <div class="policy">
           <h2>Privacy Policy for LiftZone Workouts</h2>
-          <p class="policy-updated">Last Updated: April 9, 2026</p>
+          <p class="policy-updated">Last Updated: April 24, 2026</p>
           <div class="policy-body">
+
             <div>
-              <h3>1. Introduction</h3>
-              <p>LiftZone Workouts (the "App") is a biomechanical fitness platform providing distinct training experiences including Dynamic Personalization and Workout Library Programs. We are committed to a Privacy First architecture. This policy explains our Developer Blind data model which ensures that your personal training, sleep, nutrition, and health data remains under your exclusive control.</p>
+              <h3>1. Introduction and Data Controller</h3>
+              <p>LiftZone Workouts ("the App," "we," "us," or "our") is developed and operated by Evo Solutions. This Privacy Policy explains how we handle information when you use our iOS application and Apple Watch companion app.</p>
+              <p>We operate under a privacy-first architecture. The vast majority of your personal data — including workout history, nutrition logs, health metrics, body measurements, and progress photos — is stored exclusively in your private Apple iCloud container. We do not operate backend servers that store your personal data. We cannot access, view, or retrieve the contents of your private iCloud container.</p>
+              <p>For users in the European Economic Area (EEA), United Kingdom, or Switzerland, Evo Solutions acts as the data controller for the limited data described in Section 5 of this policy. For all data stored in your private iCloud container, Apple Inc. acts as the data processor under its own terms and privacy policy.</p>
             </div>
+
             <div>
-              <h3>2. The Developer Blind Data Model</h3>
-              <p>Unlike traditional fitness applications that collect and store your data on their own servers, LiftZone Workouts utilizes Apple CloudKit technology.</p>
+              <h3>2. Data We Do Not Access</h3>
+              <p>The following categories of data are stored in your private Apple iCloud container using Apple CloudKit. This data is encrypted by Apple and synced only across your own authorized devices. We have zero access to this data:</p>
               <ul>
-                <li><strong>Zero Access Storage:</strong> Your workout history, profile metrics, nutrition records, voice logs, and sleep data are stored in your private iCloud database.</li>
-                <li><strong>Encrypted Sync:</strong> Data is encrypted by Apple and synced only across your authorized devices.</li>
-                <li><strong>No Collection:</strong> We, the developers of LiftZone Workouts, do not have access to nor do we store your personal information on any servers owned or managed by us. We cannot see your weights, photos, voice recordings, or health data.</li>
+                <li>Workout history, exercise performance, sets, reps, and weights</li>
+                <li>Profile information (name, body metrics, fitness goals, experience level)</li>
+                <li>Nutrition logs, meal entries, and macro tracking data</li>
+                <li>Progress photos and body composition images</li>
+                <li>Voice recordings used for meal logging</li>
+                <li>Sleep, energy, strain, and recovery data</li>
+                <li>Activity logs and movement data</li>
+                <li>Custom exercises and workout plans</li>
+                <li>Achievement and streak history</li>
+              </ul>
+              <p>Because we cannot access this data, we cannot comply with data access requests for it. You control this data entirely through your Apple ID and iCloud account settings.</p>
+            </div>
+
+            <div>
+              <h3>3. On-Device Processing</h3>
+              <p>The App performs the following processing locally on your device. No data from these operations is transmitted to our servers:</p>
+              <ul>
+                <li><strong>Workout Intelligence:</strong> Our algorithm processes your exercise history locally to calculate your Estimated One-Rep Max (E1RM), generate adaptive workout plans, and manage progressive overload.</li>
+                <li><strong>Camera Food Scanner:</strong> Images captured by the camera are analyzed on-device using Apple Core ML. The images are never transmitted to us or to any external server.</li>
+                <li><strong>On-Device Language Model:</strong> On supported devices (iOS 26+), the App uses Apple Foundation Models to process meal descriptions, correct spelling, and generate nutritional estimates. This processing occurs entirely on your device.</li>
+                <li><strong>Recovery and Strain Calculation:</strong> Sleep quality, energy levels, and activity data are processed locally to provide recovery insights.</li>
+                <li><strong>Data Export:</strong> When you export workout history as an image or CSV file, that file is generated locally. You control where and with whom you share it.</li>
               </ul>
             </div>
+
             <div>
-              <h3>3. Data Usage Distinction</h3>
-              <p>While we do not collect your data, the App processes it locally and within your private iCloud container to provide functional intelligence:</p>
+              <h3>4. Apple HealthKit Integration</h3>
+              <p>With your explicit opt-in permission, the App reads and writes specific data types from Apple HealthKit:</p>
+              <p><strong>Data we read:</strong> heart rate, resting heart rate, heart rate variability (HRV), step count, walking/running distance, active energy burned, exercise minutes, sleep analysis, and dietary nutrients (water, calories, protein, carbohydrates, fat).</p>
+              <p><strong>Data we write:</strong> completed workouts (type, duration, calories burned) and dietary nutrients logged through the App.</p>
+              <p>HealthKit data is never transmitted to us, to RevenueCat, to the USDA, or to any third party. It is used solely for display and local computation within the App. You may revoke HealthKit permissions at any time through the iOS Settings app under Privacy &amp; Security &gt; Health.</p>
+              <p>In compliance with Apple's HealthKit guidelines, we do not use HealthKit data for advertising, marketing, or sale to data brokers or information resellers.</p>
+            </div>
+
+            <div>
+              <h3>5. Third-Party Services and Data We Share</h3>
+              <p>We use a limited number of third-party services. Each is described below with the specific data it receives:</p>
+
+              <p><strong>5.1 RevenueCat (Subscription Management)</strong></p>
+              <p>RevenueCat, Inc. manages subscription verification and entitlement delivery. When you use the App, RevenueCat receives:</p>
               <ul>
-                <li><strong>Dynamic Coaching:</strong> The App processes your workout performance and exercise history locally. Our algorithm recalibrates your Estimated One Rep Max to ensure progressive overload in future sessions.</li>
-                <li><strong>Voice and Image Processing:</strong> Features such as the Meal Scanner and Voice Logging process images and audio locally on your device or securely through native Apple OS services. We do not see, hear, or store the images you scan or the audio you speak.</li>
-                <li><strong>Recovery and Strain Tracking:</strong> The App processes your sleep, energy levels, and outside activity logs locally to provide your personalized recovery and strain insights.</li>
-                <li><strong>Data Export:</strong> When you choose to export your workout history as an image or CSV file, that file is generated locally on your device. You retain full control over where and with whom you share those files.</li>
+                <li>An anonymous user identifier generated by RevenueCat (not your Apple ID or name)</li>
+                <li>Subscription status, purchase history, and entitlement state</li>
+                <li>App install date and onboarding completion status</li>
+                <li>Your selected fitness goal and experience level (transmitted as anonymized attributes for segmentation, not linked to your identity)</li>
+                <li>Whether the paywall was shown, skipped, or converted</li>
+              </ul>
+              <p>RevenueCat does not receive your name, email address, workout data, nutrition logs, health data, or any content from your iCloud container. RevenueCat's privacy policy is available at <a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a>.</p>
+
+              <p><strong>5.2 USDA FoodData Central API (Nutrition Database)</strong></p>
+              <p>When you search for food items to log a meal, the App sends your search query to the United States Department of Agriculture FoodData Central API (<code>api.nal.usda.gov</code>) to retrieve nutritional information (calories, protein, carbohydrates, fat, serving sizes). The USDA receives:</p>
+              <ul>
+                <li>The food search text you enter</li>
+                <li>Your device IP address (as part of the network request)</li>
+                <li>A user-agent header identifying the App</li>
+              </ul>
+              <p>The USDA does not receive your name, Apple ID, workout data, health data, or any other personal information. The USDA API is a public service of the U.S. government. Its privacy policy is available at <a href="https://www.usda.gov/privacy-policy">usda.gov/privacy-policy</a>.</p>
+
+              <p><strong>5.3 Apple CloudKit (Data Synchronization)</strong></p>
+              <p>Apple CloudKit synchronizes your data across your devices using your private iCloud container. Apple processes this data under its own privacy policy at <a href="https://www.apple.com/privacy/">apple.com/privacy</a>. We do not have access to the contents of your private container.</p>
+
+              <p><strong>5.4 Apple Speech Recognition</strong></p>
+              <p>The voice meal logging feature uses Apple's Speech framework (SFSpeechRecognizer). Depending on your device and iOS version, voice data may be processed on-device or transmitted to Apple's servers for transcription. Apple's handling of speech data is governed by Apple's privacy policy. We do not receive, store, or have access to your voice recordings or transcripts — they are processed within the Apple ecosystem and the result is stored only in your private iCloud container.</p>
+
+              <p><strong>5.5 Apple App Store (Payments)</strong></p>
+              <p>All subscription payments are processed by Apple through the App Store. We do not receive, process, or store your payment card details, billing address, or financial information. Apple's payment terms are available at <a href="https://www.apple.com/legal/internet-services/itunes/">apple.com/legal/internet-services/itunes</a>.</p>
+            </div>
+
+            <div>
+              <h3>6. Data Retention</h3>
+              <ul>
+                <li><strong>iCloud Data:</strong> Retained in your private iCloud container for as long as you maintain your Apple ID and iCloud account. We have no ability to set retention periods for this data.</li>
+                <li><strong>RevenueCat Data:</strong> Subscription and anonymous attribute data is retained by RevenueCat in accordance with their data retention policy. You may request deletion by contacting us.</li>
+                <li><strong>USDA Queries:</strong> We do not log or retain your food search queries. The USDA may retain server logs in accordance with U.S. federal records management requirements.</li>
+                <li><strong>On-Device Data:</strong> Local data (Keychain entries, UserDefaults preferences, cached content) is retained on your device until you delete the App or use the Reset App Data function within the App.</li>
               </ul>
             </div>
+
             <div>
-              <h3>4. Optional HealthKit Integration</h3>
-              <p>With your explicit permission, the App views specific data from Apple HealthKit (such as heart rate, steps, and sleep data) to populate your Activity Dashboard and calculate your daily recovery. This data is used for display and local processing only and is never transmitted to us or any outside service.</p>
-            </div>
-            <div>
-              <h3>5. Outside Service Providers</h3>
-              <p>We limit outside involvement to essential infrastructure:</p>
+              <h3>7. Your Rights</h3>
+              <p><strong>All Users:</strong></p>
               <ul>
-                <li><strong>Apple CloudKit:</strong> Provides secure private data synchronization.</li>
-                <li><strong>Apple Speech Recognition:</strong> Safely processes your voice logs directly through your device without sending data to us.</li>
-                <li><strong>RevenueCat:</strong> Manages subscription status anonymously. We do not collect or store your payment details. All transactions are handled securely by the Apple App Store.</li>
+                <li><strong>Access and Portability:</strong> You can view all your data within the App. You can export your workout history as CSV or image at any time.</li>
+                <li><strong>Modification:</strong> You can edit your profile, workout history, and nutrition logs directly in the App.</li>
+                <li><strong>Deletion:</strong> You can permanently delete all App data through Settings &gt; Reset App Data. This removes all records from your device and your private iCloud container. This action is irreversible.</li>
+                <li><strong>Revoke Permissions:</strong> You can revoke camera, microphone, speech recognition, and HealthKit permissions at any time through iOS Settings.</li>
               </ul>
-            </div>
-            <div>
-              <h3>6. Your Rights and Data Control</h3>
+
+              <p><strong>European Economic Area, United Kingdom, and Switzerland (GDPR):</strong></p>
+              <p>If you are located in the EEA, UK, or Switzerland, you have additional rights under the General Data Protection Regulation (GDPR) and equivalent legislation:</p>
               <ul>
-                <li><strong>Access and Modification:</strong> You can update your profile metrics directly within the App at any time.</li>
-                <li><strong>Irreversible Deletion:</strong> You maintain full ownership of your data. You may permanently delete your profile and all associated history through the Reset App Data option in the App Settings. This action immediately removes all records from both your local device and your private iCloud container.</li>
+                <li><strong>Legal Basis:</strong> We process the limited data described in Section 5 on the basis of <em>legitimate interest</em> (subscription management and service delivery) and <em>consent</em> (HealthKit access, camera, microphone, speech recognition). You may withdraw consent at any time.</li>
+                <li><strong>Right to Object:</strong> You may object to processing based on legitimate interest by contacting us at the address below.</li>
+                <li><strong>Right to Lodge a Complaint:</strong> You have the right to lodge a complaint with your local data protection supervisory authority.</li>
+                <li><strong>Data Transfers:</strong> RevenueCat and the USDA API are operated by entities based in the United States. Data transmitted to these services may be transferred to and processed in the United States. RevenueCat participates in standard contractual clauses for international data transfers. The USDA is a U.S. government agency not subject to GDPR adequacy decisions; data sent to it is limited to food search queries and IP addresses.</li>
               </ul>
+
+              <p><strong>California (CCPA/CPRA):</strong></p>
+              <p>If you are a California resident, the California Consumer Privacy Act (CCPA) and California Privacy Rights Act (CPRA) provide you with additional rights:</p>
+              <ul>
+                <li>We do <strong>not</strong> sell your personal information.</li>
+                <li>We do <strong>not</strong> share your personal information for cross-context behavioral advertising.</li>
+                <li>You have the right to know what personal information we collect, request its deletion, and opt out of any future sale (though we do not sell data).</li>
+                <li>We will not discriminate against you for exercising these rights.</li>
+              </ul>
+
+              <p><strong>Brazil (LGPD), Canada (PIPEDA), Australia (Privacy Act 1988):</strong></p>
+              <p>Users in these jurisdictions have rights to access, correct, and delete personal data under their respective national privacy laws. To exercise these rights, contact us using the information in Section 12.</p>
             </div>
+
             <div>
-              <h3>7. Children's Privacy</h3>
-              <p>LiftZone Workouts is not intended for use by children under the age of 13. We do not knowingly collect or have access to any personal information from children.</p>
+              <h3>8. Children's Privacy</h3>
+              <p>LiftZone Workouts is not directed at children. We do not knowingly collect personal information from children under the age of 13 (United States, under COPPA) or under the age of 16 (European Economic Area, under GDPR, where applicable). If you believe a child has provided data through the App, please contact us and we will take steps to delete it.</p>
             </div>
+
             <div>
-              <h3>8. Legal Disclaimer</h3>
-              <p>LiftZone Workouts provides fitness and nutrition information for educational purposes. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult with a healthcare professional before starting any new exercise program.</p>
+              <h3>9. Security</h3>
+              <p>Your data stored in iCloud is encrypted by Apple using AES-128 encryption at minimum, both in transit (TLS 1.2+) and at rest. On-device data is protected by iOS hardware encryption and your device passcode. Keychain entries used by the App (such as trial state) are stored with the <code>kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly</code> protection class and are not included in unencrypted backups.</p>
+              <p>While we implement reasonable measures to protect your information, no method of electronic storage or transmission is 100% secure. We cannot guarantee absolute security.</p>
             </div>
+
             <div>
-              <h3>9. Contact Us</h3>
-              <p>For questions regarding this Privacy First policy, please contact:</p>
+              <h3>10. Health and Fitness Disclaimer</h3>
+              <p>LiftZone Workouts provides fitness programming, nutritional estimates, and recovery insights for informational and educational purposes only. The App is not a medical device and is not intended to diagnose, treat, cure, or prevent any disease or medical condition. Nutritional estimates provided by the camera food scanner and USDA database are approximations and should not be relied upon for medical dietary requirements. Always consult a qualified healthcare professional before beginning any exercise program or making significant changes to your diet.</p>
+            </div>
+
+            <div>
+              <h3>11. Changes to This Policy</h3>
+              <p>We may update this Privacy Policy from time to time. When we make material changes, we will update the "Last Updated" date at the top of this page and, where practicable, notify you through the App or via the App Store release notes. Your continued use of the App after changes are posted constitutes your acceptance of the revised policy. We encourage you to review this page periodically.</p>
+            </div>
+
+            <div>
+              <h3>12. Contact Us</h3>
+              <p>For questions, concerns, or requests regarding this Privacy Policy or your personal data, please contact:</p>
+              <p><strong>Evo Solutions</strong></p>
               <p>Email: <a href="mailto:support@liftzoneworkouts.com">support@liftzoneworkouts.com</a></p>
               <p>Website: <a href="https://www.liftzoneworkouts.com">www.liftzoneworkouts.com</a></p>
+              <p>For GDPR-related inquiries, you may also contact us at the email above with the subject line "GDPR Request."</p>
+              <p>We will respond to all legitimate requests within 30 days (or within the timeframe required by applicable law).</p>
             </div>
+
           </div>
         </div>
 
