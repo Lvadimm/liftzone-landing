@@ -121,9 +121,9 @@ export default function Privacy() {
                 <div className="mt-8 space-y-8 text-sm leading-relaxed text-white/45">
                   <div>
                     <h4 className="mb-3 text-base font-semibold text-white/70">1. Introduction and Data Controller</h4>
-                    <p>LiftZone Workouts ("the App," "we," "us," or "our") is developed and operated by Evo Solutions. This Privacy Policy explains how we handle information when you use our iOS application and Apple Watch companion app.</p>
+                    <p>LiftZone Workouts ("the App," "we," "us," or "our") is developed and operated by the developer. This Privacy Policy explains how we handle information when you use our iOS application and Apple Watch companion app.</p>
                     <p className="mt-3">We operate under a privacy-first architecture. The vast majority of your personal data — including workout history, nutrition logs, health metrics, body measurements, and progress photos — is stored exclusively in your private Apple iCloud container. We do not operate backend servers that store your personal data. We cannot access, view, or retrieve the contents of your private iCloud container.</p>
-                    <p className="mt-3">For users in the European Economic Area (EEA), United Kingdom, or Switzerland, Evo Solutions acts as the data controller for the limited data described in Section 5. For all data stored in your private iCloud container, Apple Inc. acts as the data processor under its own terms and privacy policy.</p>
+                    <p className="mt-3">For users in the European Economic Area (EEA), United Kingdom, or Switzerland, the developer acts as the data controller for the limited data described in Section 5. For all data stored in your private iCloud container, Apple Inc. acts as the data processor under its own terms and privacy policy.</p>
                   </div>
 
                   <div>
@@ -166,8 +166,8 @@ export default function Privacy() {
                     <h4 className="mb-3 text-base font-semibold text-white/70">5. Third-Party Services</h4>
 
                     <p className="mt-4 mb-2"><strong className="text-white/60">5.1 RevenueCat (Subscription Management)</strong></p>
-                    <p className="mb-2">RevenueCat receives: an anonymous user identifier (not your Apple ID or name), subscription status, app install date, onboarding status, your selected fitness goal and experience level (as anonymized attributes), and paywall interaction data.</p>
-                    <p>RevenueCat does not receive your name, email, workout data, nutrition logs, or health data. <a href="https://www.revenuecat.com/privacy" className="text-accent hover:underline">RevenueCat Privacy Policy</a>.</p>
+                    <p className="mb-2">RevenueCat receives only an anonymous user identifier (not your Apple ID, name, or email) and your subscription status (whether you are subscribed to LiftZone Pro).</p>
+                    <p>RevenueCat does not receive your name, email, fitness goals, workout data, nutrition logs, or health data. All payments are handled by the Apple App Store. <a href="https://www.revenuecat.com/privacy" className="text-accent hover:underline">RevenueCat Privacy Policy</a>.</p>
 
                     <p className="mt-4 mb-2"><strong className="text-white/60">5.2 USDA FoodData Central API</strong></p>
                     <p className="mb-2">When you search for food items, the App sends your search query to the USDA API (api.nal.usda.gov) to retrieve nutritional information. The USDA receives your food search text, your device IP address, and a user-agent header.</p>
@@ -234,7 +234,7 @@ export default function Privacy() {
 
                   <div>
                     <h4 className="mb-3 text-base font-semibold text-white/70">12. Contact Us</h4>
-                    <p><strong className="text-white/60">Evo Solutions</strong></p>
+                    <p><strong className="text-white/60">the developer</strong></p>
                     <p className="mt-2">Email: <a href="mailto:support@liftzoneworkouts.com" className="text-accent hover:underline">support@liftzoneworkouts.com</a></p>
                     <p>Website: <a href="https://www.liftzoneworkouts.com" className="text-accent hover:underline">www.liftzoneworkouts.com</a></p>
                     <p className="mt-2">For GDPR requests, email us with the subject line "GDPR Request." We respond to all legitimate requests within 30 days.</p>
