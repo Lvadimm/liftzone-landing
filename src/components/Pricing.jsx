@@ -4,7 +4,6 @@ const freeFeatures = [
   "200+ exercises with video guides",
   "Workout tracking and full history",
   "Manual meal logging and barcode scanner",
-  "50+ professionally designed programs",
   "Apple Watch companion app",
   "HealthKit integration",
   "Progress photos and personal records",
@@ -14,6 +13,7 @@ const freeFeatures = [
 ];
 
 const proFeatures = [
+  "50+ professionally designed programs",
   "Workout plans tailored to your profile",
   "AI food scanner (camera)",
   "Voice meal logging",
