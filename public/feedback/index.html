@@ -52,11 +52,14 @@
       .email-btn {
         display: inline-flex; align-items: center; gap: 0.625rem;
         margin-top: 1.5rem; padding: 0.875rem 2.5rem;
-        border-radius: 9999px; background: var(--color-accent);
+        border-radius: 9999px;
+        background: linear-gradient(135deg, rgba(100,171,250,0.2), rgba(100,171,250,0.08));
+        border: 1px solid rgba(100,171,250,0.25);
+        -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);
         color: #fff; font-weight: 600; font-size: 1rem;
-        transition: opacity 0.2s;
+        transition: all 0.2s;
       }
-      .email-btn:hover { opacity: 0.85; text-decoration: none; }
+      .email-btn:hover { background: linear-gradient(135deg, rgba(100,171,250,0.3), rgba(100,171,250,0.15)); border-color: rgba(100,171,250,0.4); text-decoration: none; }
       .tips { margin-top: 2.5rem; border-radius: 1.5rem; border: 1px solid rgba(255,255,255,0.04); background: rgba(255,255,255,0.02); padding: 2rem; }
       .tips h3 { font-size: 1rem; font-weight: 600; color: rgba(255,255,255,0.6); margin-bottom: 1rem; }
       .tips ul { margin-left: 1.25rem; list-style: disc; }
