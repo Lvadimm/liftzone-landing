@@ -14,8 +14,14 @@ export default function Footer() {
           <a href="#pricing" className="text-xs font-medium text-white/25 transition-colors hover:text-white/50">
             Pricing
           </a>
+          <a href="/blog" className="text-xs font-medium text-white/25 transition-colors hover:text-white/50">
+            Blog
+          </a>
           <a href="/privacy" className="text-xs font-medium text-white/25 transition-colors hover:text-white/50">
             Privacy
+          </a>
+          <a href="/feedback" className="text-xs font-medium text-white/25 transition-colors hover:text-white/50">
+            Feedback
           </a>
           <a
             href="mailto:support@liftzoneworkouts.com"
