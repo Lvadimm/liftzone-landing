@@ -11,7 +11,7 @@ const points = [
       </svg>
     ),
     title: "Developer-blind architecture",
-    description: "Your data lives in your private iCloud container. We cannot see your weights, photos, voice recordings, or health data.",
+    description: "Your workouts, nutrition, body measurements, photos, and health metrics live in your private iCloud and on your device. We cannot see them.",
   },
   {
     icon: (
@@ -19,8 +19,8 @@ const points = [
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       </svg>
     ),
-    title: "On-device processing",
-    description: "Meal scanning, voice logging, and recovery insights run locally on your device or through native Apple services.",
+    title: "On-device first",
+    description: "Your plans, recovery insights, and voice logging are handled on your device or by Apple. Optional cloud features only send the specific item you choose.",
   },
   {
     icon: (
@@ -30,7 +30,7 @@ const points = [
       </svg>
     ),
     title: "No tracking, no ads",
-    description: "No third-party analytics. No ad networks. You are the customer, not the product.",
+    description: "No third-party analytics. No ad networks. No profiling. You are the customer, not the product.",
   },
   {
     icon: (
@@ -40,8 +40,8 @@ const points = [
         <path d="M20.39 18.39A5 5 0 0018 9h-1.26A8 8 0 103 16.3" />
       </svg>
     ),
-    title: "Encrypted iCloud sync",
-    description: "Data is encrypted by Apple and synced only across your authorized devices. No external servers involved.",
+    title: "Encrypted & yours",
+    description: "Your data is encrypted by Apple and synced only across your own authorized devices. No accounts, no login, no email required.",
   },
 ];
 
@@ -116,29 +116,32 @@ export default function Privacy() {
             >
               <div className="mt-8 rounded-3xl border border-white/[0.04] bg-white/[0.02] p-8 md:p-12">
                 <h3 className="text-2xl font-semibold tracking-tight">Privacy Policy for LiftZone Workouts</h3>
-                <p className="mt-2 text-sm text-white/25">Last Updated: April 24, 2026</p>
+                <p className="mt-2 text-sm text-white/25">Last Updated: May 29, 2026</p>
 
                 <div className="mt-8 space-y-8 text-sm leading-relaxed text-white/45">
                   <div>
                     <h4 className="mb-3 text-base font-semibold text-white/70">1. Introduction and Data Controller</h4>
                     <p>LiftZone Workouts ("the App," "we," "us," or "our") is developed and operated by the developer. This Privacy Policy explains how we handle information when you use our iOS application and Apple Watch companion app.</p>
-                    <p className="mt-3">We operate under a privacy-first architecture. The vast majority of your personal data — including workout history, nutrition logs, health metrics, body measurements, and progress photos — is stored exclusively in your private Apple iCloud container. We do not operate backend servers that store your personal data. We cannot access, view, or retrieve the contents of your private iCloud container.</p>
-                    <p className="mt-3">For users in the European Economic Area (EEA), United Kingdom, or Switzerland, the developer acts as the data controller for the limited data described in Section 5. For all data stored in your private iCloud container, Apple Inc. acts as the data processor under its own terms and privacy policy.</p>
+                    <p className="mt-3">We operate under a privacy-first, data-minimizing architecture. The App has no account system and no login: it works from an anonymous, per-installation identifier and never asks for your name, email address, or Apple ID. The vast majority of your personal data — including workout history, nutrition logs, health metrics, body measurements, readiness check-ins, and your progress photos — is stored only on your device and in your own private Apple iCloud container. We cannot access, view, or retrieve it.</p>
+                    <p className="mt-3">To provide certain features, we operate a limited, secure cloud service (described in Section 5) that supports subscription verification, security and anti-abuse protection, and optional cloud-assisted features. This service does not store your workout, nutrition, health, or profile records, is never used to advertise to you, and is not used to build a profile about you.</p>
+                    <p className="mt-3">For users in the European Economic Area (EEA), United Kingdom, or Switzerland, the developer acts as the data controller for the limited data described in Section 5. For all data stored in your private iCloud container, Apple Inc. acts as the data processor under its own terms and privacy policy. Where we engage the service providers described in Section 5, they act as our processors, and we can identify the specific provider behind each category upon verified request.</p>
                   </div>
 
                   <div>
-                    <h4 className="mb-3 text-base font-semibold text-white/70">2. Data We Do Not Access</h4>
-                    <p className="mb-3">The following data is stored in your private Apple iCloud container using Apple CloudKit. It is encrypted by Apple and synced only across your own authorized devices. We have zero access to this data:</p>
+                    <h4 className="mb-3 text-base font-semibold text-white/70">2. Data Stored on Your Device and in Your Private iCloud (We Cannot Access)</h4>
+                    <p className="mb-3">The following categories of data are stored on your device and synced through Apple CloudKit to your own private Apple iCloud container. This data is encrypted by Apple and synced only across your own authorized devices. We have zero access to it:</p>
                     <ul className="ml-5 list-disc space-y-2">
-                      <li>Workout history, exercise performance, sets, reps, and weights</li>
-                      <li>Profile information (name, body metrics, fitness goals, experience level)</li>
-                      <li>Nutrition logs, meal entries, and macro tracking data</li>
-                      <li>Progress photos and body composition images</li>
-                      <li>Voice recordings used for meal logging</li>
+                      <li>Workout history, exercise performance, sets, reps, weights, and RPE</li>
+                      <li>Profile information (any name you choose to enter, body metrics, fitness goals, experience level, injury history, equipment)</li>
+                      <li>Nutrition logs, meal entries, macros, custom foods, and favorite meals</li>
+                      <li>Estimated one-rep maxes and strength metrics</li>
+                      <li>Readiness and mood check-ins, and adaptive-session logs</li>
                       <li>Sleep, energy, strain, and recovery data</li>
-                      <li>Activity logs, custom exercises, achievements, and streaks</li>
+                      <li>Activity logs, custom exercises, and workout plans</li>
+                      <li>Achievements, streaks, and water-intake logs</li>
                     </ul>
-                    <p className="mt-3">Because we cannot access this data, we cannot comply with data access requests for it. You control this data entirely through your Apple ID and iCloud account settings.</p>
+                    <p className="mt-3"><strong className="text-white/60">Progress photos and body-composition images</strong> are stored only on your device. They are not synced to iCloud and not transmitted to us or to any third party.</p>
+                    <p className="mt-3">Because we cannot access this data, we cannot comply with data access requests for it. You control this data entirely through your Apple ID and iCloud account settings, and you can erase it at any time using Reset App Data (see Section 7).</p>
                   </div>
 
                   <div>
@@ -146,9 +149,9 @@ export default function Privacy() {
                     <p className="mb-3">The App performs the following processing locally on your device. No data from these operations is transmitted to our servers:</p>
                     <ul className="ml-5 list-disc space-y-2">
                       <li><strong className="text-white/60">Workout Intelligence:</strong> Our algorithm processes your exercise history locally to calculate your Estimated One-Rep Max (E1RM), generate adaptive workout plans, and manage progressive overload.</li>
-                      <li><strong className="text-white/60">Camera Food Scanner:</strong> Images are analyzed on-device using Apple Core ML. They are never transmitted to us or any external server.</li>
-                      <li><strong className="text-white/60">On-Device Language Model:</strong> On supported devices (iOS 26+), the App uses Apple Foundation Models for meal description processing. This occurs entirely on your device.</li>
-                      <li><strong className="text-white/60">Recovery and Strain:</strong> Sleep, energy, and activity data are processed locally for recovery insights.</li>
+                      <li><strong className="text-white/60">On-Device Food Scanner:</strong> The App includes an on-device food-recognition mode that analyzes images locally on your device. In this mode, images are never transmitted off your device. An optional cloud-assisted scan is described separately in Section 5.1, and you choose which mode to use.</li>
+                      <li><strong className="text-white/60">On-Device Language Model:</strong> On supported devices, the App uses Apple's on-device language models to interpret meal descriptions and generate nutritional estimates. This processing occurs entirely on your device.</li>
+                      <li><strong className="text-white/60">Recovery and Strain:</strong> Sleep quality, energy levels, readiness, and activity data are processed locally to provide recovery insights and adapt your sessions.</li>
                       <li><strong className="text-white/60">Data Export:</strong> Workout history exports (image or CSV) are generated locally. You control where and with whom you share them.</li>
                     </ul>
                   </div>
@@ -158,38 +161,49 @@ export default function Privacy() {
                     <p>With your explicit opt-in permission, the App reads and writes specific data types from Apple HealthKit:</p>
                     <p className="mt-3"><strong className="text-white/60">Data we read:</strong> heart rate, resting heart rate, HRV, step count, walking/running distance, active energy burned, exercise minutes, sleep analysis, and dietary nutrients.</p>
                     <p className="mt-3"><strong className="text-white/60">Data we write:</strong> completed workouts (type, duration, calories) and dietary nutrients logged through the App.</p>
-                    <p className="mt-3">HealthKit data is never transmitted to us, to RevenueCat, to the USDA, or to any third party. You may revoke permissions at any time through iOS Settings &gt; Privacy &amp; Security &gt; Health.</p>
+                    <p className="mt-3">HealthKit data is never transmitted to us or to any third party. It is used solely for display and local computation within the App. You may revoke permissions at any time through iOS Settings &gt; Privacy &amp; Security &gt; Health.</p>
                     <p className="mt-3">In compliance with Apple's HealthKit guidelines, we do not use HealthKit data for advertising, marketing, or sale to data brokers.</p>
                   </div>
 
                   <div>
-                    <h4 className="mb-3 text-base font-semibold text-white/70">5. Third-Party Services</h4>
+                    <h4 className="mb-3 text-base font-semibold text-white/70">5. Information We Share With Service Providers</h4>
+                    <p>To deliver certain features, the App transmits a strictly limited set of data to the service providers below. We describe each provider by category. We do not sell your personal information, none of these providers receives the contents of your private iCloud container, and we can provide the identity of the specific provider behind each category upon verified request.</p>
 
-                    <p className="mt-4 mb-2"><strong className="text-white/60">5.1 RevenueCat (Subscription Management)</strong></p>
-                    <p className="mb-2">RevenueCat receives only an anonymous user identifier (not your Apple ID, name, or email) and your subscription status (whether you are subscribed to LiftZone Pro).</p>
-                    <p>RevenueCat does not receive your name, email, fitness goals, workout data, nutrition logs, or health data. All payments are handled by the Apple App Store. <a href="https://www.revenuecat.com/privacy" className="text-accent hover:underline">RevenueCat Privacy Policy</a>.</p>
+                    <p className="mt-4 mb-2"><strong className="text-white/60">5.1 Cloud-Assisted Meal Photo Recognition (optional, premium feature)</strong></p>
+                    <p className="mb-2">If you choose the cloud-assisted meal scan, the photo of the meal you are scanning is securely transmitted — through our cloud infrastructure provider — to a third-party AI processing provider, which returns an estimate of the food and its nutritional values. Before transmission, the image is resized and its metadata (such as location and EXIF data) is removed. Only the image and minimal technical parameters are sent; no name, identity, health data, or other personal records are included.</p>
+                    <p>The image is used solely to generate your scan result. It is processed transiently and is not retained by us or stored on the processing servers, and it is not used to advertise to you, to identify you, or to train unrelated systems. This feature is optional — an on-device scanning mode (Section 3) is also available and transmits nothing off your device.</p>
 
-                    <p className="mt-4 mb-2"><strong className="text-white/60">5.2 USDA FoodData Central API</strong></p>
-                    <p className="mb-2">When you search for food items, the App sends your search query to the USDA API (api.nal.usda.gov) to retrieve nutritional information. The USDA receives your food search text, your device IP address, and a user-agent header.</p>
-                    <p>The USDA does not receive your name, Apple ID, workout data, or health data. <a href="https://www.usda.gov/privacy-policy" className="text-accent hover:underline">USDA Privacy Policy</a>.</p>
+                    <p className="mt-4 mb-2"><strong className="text-white/60">5.2 Subscription Verification (Apple App Store)</strong></p>
+                    <p>Subscriptions are sold and managed entirely by Apple through the App Store; we do not use any third-party subscription-management service. To confirm whether you have an active subscription, your App Store purchase receipt is verified on your device and, for cloud-based premium features, transmitted together with an anonymous identifier to our own cloud infrastructure provider, which validates it directly against Apple's cryptographic signature. No separate subscription provider is involved, and no subscription data is shared with any such third party. All payment processing is handled by Apple — we never see your payment details.</p>
 
-                    <p className="mt-4 mb-2"><strong className="text-white/60">5.3 Apple CloudKit</strong></p>
-                    <p>Synchronizes your data across your devices using your private iCloud container. <a href="https://www.apple.com/privacy/" className="text-accent hover:underline">Apple Privacy Policy</a>.</p>
+                    <p className="mt-4 mb-2"><strong className="text-white/60">5.3 Security, Device Integrity, and Anti-Abuse (cloud infrastructure provider)</strong></p>
+                    <p>To protect the service from fraud and abuse and to enforce fair-use limits, the App sends an anonymous per-installation identifier and a cryptographic device-integrity attestation to our cloud infrastructure provider when it makes a request on your behalf. The attestation is generated by Apple's Device Check / App Attest service and proves the request comes from a genuine, unmodified copy of the App. It contains no personal content and is validated and then discarded. Our cloud infrastructure provider also retains minimal, non-personal operational data (such as request counters used to enforce rate limits).</p>
 
-                    <p className="mt-4 mb-2"><strong className="text-white/60">5.4 Apple Speech Recognition</strong></p>
-                    <p>Voice meal logging uses Apple's Speech framework. Depending on your device and iOS version, voice data may be processed on-device or transmitted to Apple's servers. We do not receive, store, or access your voice recordings or transcripts.</p>
+                    <p className="mt-4 mb-2"><strong className="text-white/60">5.4 Nutrition Database Lookups (nutrition-database providers)</strong></p>
+                    <p>When you search for foods by name or scan a product barcode, the App sends the search text or barcode number — and, as part of any network request, your device's IP address — to one or more third-party nutrition-database providers (including public government and community food databases) to retrieve nutrition facts. These providers do not receive your name, identity, workout data, or health data.</p>
 
-                    <p className="mt-4 mb-2"><strong className="text-white/60">5.5 Apple App Store (Payments)</strong></p>
-                    <p>All payments are processed by Apple. We do not receive your payment card details or billing address.</p>
+                    <p className="mt-4 mb-2"><strong className="text-white/60">5.5 Social Leaderboards (Apple Game Center — optional)</strong></p>
+                    <p>If you opt in to leaderboards, the competitive statistics you choose to submit (such as a strength score, estimated maxes, weekly volume, or streak length) and your Game Center alias are shared with Apple Game Center and may be visible to other participants on leaderboards. This feature is optional; we do not submit any scores unless you choose to participate, and your underlying workout, nutrition, and health data is never shared — only the score values you compete with.</p>
+
+                    <p className="mt-4 mb-2"><strong className="text-white/60">5.6 Apple iCloud / CloudKit</strong></p>
+                    <p>Apple CloudKit synchronizes your data across your devices using your private iCloud container. We do not have access to the contents of your private container. <a href="https://www.apple.com/privacy/" className="text-accent hover:underline">Apple Privacy Policy</a>.</p>
+
+                    <p className="mt-4 mb-2"><strong className="text-white/60">5.7 Apple Speech Recognition</strong></p>
+                    <p>Voice meal logging uses Apple's Speech framework. Depending on your device and iOS version, voice data may be processed on-device or transmitted to Apple for transcription. We do not receive, store, or access your voice recordings or transcripts — they are processed within the Apple ecosystem and the result is stored only in your private iCloud container.</p>
+
+                    <p className="mt-4 mb-2"><strong className="text-white/60">5.8 Apple App Store (Payments)</strong></p>
+                    <p>All subscription payments are processed by Apple. We do not receive, process, or store your payment card details, billing address, or financial information.</p>
                   </div>
 
                   <div>
                     <h4 className="mb-3 text-base font-semibold text-white/70">6. Data Retention</h4>
                     <ul className="ml-5 list-disc space-y-2">
-                      <li><strong className="text-white/60">iCloud Data:</strong> Retained for as long as you maintain your Apple ID. We have no ability to set retention periods.</li>
-                      <li><strong className="text-white/60">RevenueCat Data:</strong> Retained per RevenueCat's policy. You may request deletion by contacting us.</li>
-                      <li><strong className="text-white/60">USDA Queries:</strong> We do not log your food searches. The USDA may retain server logs per U.S. federal requirements.</li>
-                      <li><strong className="text-white/60">On-Device Data:</strong> Retained until you delete the App or use Reset App Data in Settings.</li>
+                      <li><strong className="text-white/60">iCloud Data:</strong> Retained in your private iCloud container for as long as you maintain your Apple ID. We have no ability to set retention periods for this data.</li>
+                      <li><strong className="text-white/60">On-Device Data:</strong> Local data — including progress photos, the local meal-photo cache, cached exercise videos, app preferences, and Keychain entries — is retained until you delete the App or use Reset App Data in Settings.</li>
+                      <li><strong className="text-white/60">Cloud-Assisted Scan Images:</strong> Not retained. Images sent for the optional cloud scan are processed transiently to return your result and are then discarded.</li>
+                      <li><strong className="text-white/60">Subscription Data:</strong> Your subscription is managed by Apple; we do not store subscription data with any third-party subscription provider. Entitlement results may be briefly cached by our cloud infrastructure provider (see §5.3) and contain no personal content.</li>
+                      <li><strong className="text-white/60">Security &amp; Fair-Use Data:</strong> The anonymous identifier, device-integrity validations, and request counters used by our cloud infrastructure provider are kept only as long as needed for security and rate-limiting, and contain no personal content.</li>
+                      <li><strong className="text-white/60">Nutrition Queries:</strong> We do not log your food searches. Nutrition-database providers may retain standard server logs per their own requirements.</li>
                     </ul>
                   </div>
 
@@ -199,10 +213,10 @@ export default function Privacy() {
 
                     <p className="mt-4 mb-2"><strong className="text-white/60">EEA, UK, and Switzerland (GDPR):</strong></p>
                     <ul className="ml-5 list-disc space-y-2">
-                      <li><strong className="text-white/60">Legal Basis:</strong> Legitimate interest (subscription management) and consent (HealthKit, camera, microphone). You may withdraw consent at any time.</li>
+                      <li><strong className="text-white/60">Legal Basis:</strong> We process the limited data in Section 5 on the basis of performance of a contract (subscription verification), legitimate interest (securing the service and preventing abuse), and consent (HealthKit, camera, microphone, speech recognition, the optional cloud-assisted scan, and leaderboard participation). You may withdraw consent at any time by declining or revoking the relevant permission or not using the optional feature.</li>
                       <li><strong className="text-white/60">Right to Object:</strong> Contact us to object to processing based on legitimate interest.</li>
                       <li><strong className="text-white/60">Complaints:</strong> You may lodge a complaint with your local data protection supervisory authority.</li>
-                      <li><strong className="text-white/60">International Transfers:</strong> RevenueCat and the USDA API are U.S.-based. RevenueCat uses standard contractual clauses for data transfers.</li>
+                      <li><strong className="text-white/60">International Transfers:</strong> Some service providers in Section 5 are based in, or process data in, the United States. Where personal data is transferred outside the EEA, UK, or Switzerland, we rely on appropriate safeguards such as the European Commission's Standard Contractual Clauses.</li>
                     </ul>
 
                     <p className="mt-4 mb-2"><strong className="text-white/60">California (CCPA/CPRA):</strong></p>
@@ -219,12 +233,13 @@ export default function Privacy() {
 
                   <div>
                     <h4 className="mb-3 text-base font-semibold text-white/70">9. Security</h4>
-                    <p>iCloud data is encrypted by Apple (AES-128 minimum) in transit (TLS 1.2+) and at rest. On-device data is protected by iOS hardware encryption and your device passcode. Keychain entries use the kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly protection class. No method of storage or transmission is 100% secure — we cannot guarantee absolute security.</p>
+                    <p>iCloud data is encrypted by Apple (AES-128 minimum) in transit (TLS 1.2+) and at rest. On-device data is protected by iOS hardware encryption and your device passcode. Keychain entries (such as the anonymous identifier and trial state) use the kSecAttrAccessibleAfterFirstUnlockThisDeviceOnly protection class and are not included in unencrypted backups.</p>
+                    <p className="mt-3">All communication with the limited cloud services in Section 5 occurs over encrypted connections (TLS). Requests are protected by Apple's device-integrity attestation to prevent abuse, and images sent for the optional cloud scan are transmitted securely and not stored. No method of storage or transmission is 100% secure — we cannot guarantee absolute security.</p>
                   </div>
 
                   <div>
                     <h4 className="mb-3 text-base font-semibold text-white/70">10. Health and Fitness Disclaimer</h4>
-                    <p>LiftZone Workouts provides fitness programming, nutritional estimates, and recovery insights for informational purposes only. The App is not a medical device. Nutritional estimates from the camera scanner and USDA database are approximations. Always consult a qualified healthcare professional before beginning any exercise program or making significant dietary changes.</p>
+                    <p>LiftZone Workouts provides fitness programming, nutritional estimates, and recovery insights for informational purposes only. The App is not a medical device. Nutritional estimates produced by the food scanner (whether on-device or cloud-assisted) and by nutrition databases are approximations. Always consult a qualified healthcare professional before beginning any exercise program or making significant dietary changes.</p>
                   </div>
 
                   <div>
