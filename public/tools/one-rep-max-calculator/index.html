@@ -201,6 +201,18 @@
       </div>
     </footer>
 
+    <script>
+      (function () {
+        var nav = document.querySelector("nav");
+        if (!nav) return;
+        var last = 0;
+        addEventListener("scroll", function () {
+          var y = window.scrollY || 0;
+          nav.classList.toggle("nav-tuck", y > last && y > 200);
+          last = y;
+        }, { passive: true });
+      })();
+    </script>
     <script type="module" src="/tools/one-rep-max-calculator/calc.js"></script>
   </body>
 </html>

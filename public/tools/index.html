@@ -108,5 +108,17 @@
         <p>&copy; 2026 LiftZone Workouts &middot; <a href="/">Home</a> &middot; <a href="/tools/">Tools</a> &middot; <a href="/blog/">Blog</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="mailto:support@liftzoneworkouts.com">Contact</a></p>
       </div>
     </footer>
+    <script>
+      (function () {
+        var nav = document.querySelector("nav");
+        if (!nav) return;
+        var last = 0;
+        addEventListener("scroll", function () {
+          var y = window.scrollY || 0;
+          nav.classList.toggle("nav-tuck", y > last && y > 200);
+          last = y;
+        }, { passive: true });
+      })();
+    </script>
   </body>
 </html>
