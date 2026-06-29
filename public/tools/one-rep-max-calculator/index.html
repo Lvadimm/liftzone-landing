@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One Rep Max Calculator (1RM) — Free, kg &amp; lb — LiftZone</title>
+    <meta name="description" content="Free one-rep max calculator. Estimate your 1RM from any set with the Epley and Brzycki formulas, switch kg/lb, adjust for RPE, and read a full %1RM chart for every rep range." />
+    <link rel="canonical" href="https://www.liftzoneworkouts.com/tools/one-rep-max-calculator/" />
+    <meta name="apple-itunes-app" content="app-id=6742913519" />
+    <meta property="og:title" content="One Rep Max Calculator (1RM) — Free, kg &amp; lb" />
+    <meta property="og:description" content="Estimate your 1RM from any set with the Epley and Brzycki formulas, plus a full %1RM training chart. The same math the LiftZone Workouts app uses." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.liftzoneworkouts.com/tools/one-rep-max-calculator/" />
+    <meta property="og:image" content="https://www.liftzoneworkouts.com/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="One Rep Max Calculator (1RM)" />
+    <meta name="twitter:description" content="Estimate your 1RM with Epley &amp; Brzycki, adjust for RPE, and read a full %1RM training chart." />
+    <meta name="twitter:image" content="https://www.liftzoneworkouts.com/og-image.png" />
+    <meta name="theme-color" content="#faf7f2" />
+    <link rel="icon" type="image/png" href="/icon.png" />
+    <link rel="apple-touch-icon" href="/icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Figtree:ital,wght@0,300..700;1,300..600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.liftzoneworkouts.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Free Tools", "item": "https://www.liftzoneworkouts.com/tools/" },
+            { "@type": "ListItem", "position": 3, "name": "One Rep Max Calculator", "item": "https://www.liftzoneworkouts.com/tools/one-rep-max-calculator/" }
+          ]
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "One Rep Max Calculator",
+          "applicationCategory": "HealthApplication",
+          "operatingSystem": "Any (web browser)",
+          "url": "https://www.liftzoneworkouts.com/tools/one-rep-max-calculator/",
+          "description": "Free one-rep max (1RM) calculator using the Epley and Brzycki formulas, with RPE adjustment and a full percentage-of-1RM training chart.",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+          "publisher": { "@type": "Organization", "name": "LiftZone Workouts", "logo": { "@type": "ImageObject", "url": "https://www.liftzoneworkouts.com/icon.png" } }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            { "@type": "Question", "name": "Which 1RM formula is most accurate?", "acceptedAnswer": { "@type": "Answer", "text": "For most lifters in the 1–10 rep range, the Epley and Brzycki formulas land within a few percent of each other. Averaging them — what this calculator and the LiftZone app do — smooths out their individual bias. Accuracy is highest at low reps (1–5) and drifts as reps climb, because fatigue and technique vary more on high-rep sets." } },
+            { "@type": "Question", "name": "How many reps give the most accurate estimate?", "acceptedAnswer": { "@type": "Answer", "text": "Use a hard set of about 5 reps or fewer, taken close to failure. The fewer the reps, the more accurate the estimate. Sets above 10–12 reps tend to overestimate your true one-rep max." } },
+            { "@type": "Question", "name": "What is the %1RM chart for?", "acceptedAnswer": { "@type": "Answer", "text": "It converts your estimated 1RM into target weights for every rep range, so you can load strength work (about 85–100%), hypertrophy work (about 70–80%) and back-off sets correctly instead of guessing." } },
+            { "@type": "Question", "name": "Does RPE change the estimate?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. If a set was not taken to failure, your true max is higher than the raw numbers suggest. Entering an RPE adds the estimated reps in reserve (10 minus RPE) before applying the formula, giving a more honest 1RM." } },
+            { "@type": "Question", "name": "Should I test a true one-rep max instead?", "acceptedAnswer": { "@type": "Answer", "text": "Occasionally, with full warm-ups and a spotter, experienced lifters can test a true max. But an estimate from your normal working sets is safer, repeatable, and updates every session — which is how LiftZone keeps your prescribed weights calibrated to your current strength." } }
+          ]
+        }
+      ]
+    }
+    </script>
+    <link rel="stylesheet" href="/static.css" />
+    <link rel="stylesheet" href="/tools.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="inner">
+        <a href="/" class="nav-logo"><img src="/icon-sm.png" width="36" height="36" alt="LiftZone Workouts" /> LiftZone Workouts</a>
+        <a href="/tools/" class="nav-back">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          All tools
+        </a>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container">
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <a href="/">Home</a><span class="sep">/</span><a href="/tools/">Free Tools</a><span class="sep">/</span><span class="here">One Rep Max</span>
+        </nav>
+
+        <section class="hero tool">
+          <p class="hero-label">Free Tool</p>
+          <h1 class="hero-title">One Rep Max <span>Calculator</span></h1>
+          <p class="hero-sub">Estimate your 1RM from any set using the Epley and Brzycki formulas — switch between kg and lb, adjust for RPE, and read the full percentage chart to set training weights for every rep range.</p>
+        </section>
+
+        <!-- Calculator widget -->
+        <div class="calc">
+          <div class="calc-grid">
+            <div class="calc-field">
+              <label for="weight">Weight lifted</label>
+              <input id="weight" type="number" inputmode="decimal" min="1" step="0.5" value="100" autocomplete="off" />
+            </div>
+            <div class="calc-field">
+              <label for="reps">Reps performed</label>
+              <input id="reps" type="number" inputmode="numeric" min="1" max="20" step="1" value="5" autocomplete="off" />
+            </div>
+            <div class="calc-field">
+              <div style="font-size:.8rem;font-weight:600;color:var(--ink-soft)">Units</div>
+              <div class="seg" role="radiogroup" aria-label="Weight unit">
+                <button type="button" role="radio" id="unitKg" aria-checked="true" data-unit="kg">kg</button>
+                <button type="button" role="radio" id="unitLb" aria-checked="false" data-unit="lb">lb</button>
+              </div>
+            </div>
+            <div class="calc-field">
+              <label for="rpe">Effort (RPE) — optional</label>
+              <select id="rpe">
+                <option value="10" selected>10 — to failure</option>
+                <option value="9.5">9.5 — no reps left</option>
+                <option value="9">9 — 1 rep left</option>
+                <option value="8">8 — 2 reps left</option>
+                <option value="7">7 — 3 reps left</option>
+                <option value="6">6 — 4 reps left</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="calc-result">
+            <span class="big" id="oneRm" aria-live="polite">—</span>
+            <span class="unit" id="oneRmUnit">kg estimated 1RM</span>
+            <span class="cap" id="formulaCap">Average of the Epley and Brzycki formulas</span>
+          </div>
+
+          <div class="calc-actions">
+            <button class="btn-soft" id="copyBtn" type="button" aria-label="Copy your result to the clipboard">Copy result</button>
+            <span class="calc-status" id="status" role="status" aria-live="polite"></span>
+          </div>
+          <noscript><p class="calc-note">Enable JavaScript to use the interactive calculator. The formulas and the full %1RM chart are described below.</p></noscript>
+        </div>
+
+        <!-- %1RM training chart (static; JS fills the "Your weight" column) -->
+        <div class="calc-table-wrap">
+          <table class="calc-table" id="chart">
+            <thead>
+              <tr><th>Reps</th><th class="num">% of 1RM</th><th class="num">Your weight</th><th>Typical use</th></tr>
+            </thead>
+            <tbody>
+              <tr data-reps="1"><td>1</td><td class="num">100%</td><td class="num w">—</td><td>Max / testing</td></tr>
+              <tr data-reps="2"><td>2</td><td class="num">95%</td><td class="num w">—</td><td>Max strength</td></tr>
+              <tr data-reps="3"><td>3</td><td class="num">93%</td><td class="num w">—</td><td>Strength</td></tr>
+              <tr data-reps="4"><td>4</td><td class="num">90%</td><td class="num w">—</td><td>Strength</td></tr>
+              <tr data-reps="5"><td>5</td><td class="num">87%</td><td class="num w">—</td><td>Strength</td></tr>
+              <tr data-reps="6"><td>6</td><td class="num">85%</td><td class="num w">—</td><td>Strength / size</td></tr>
+              <tr data-reps="7"><td>7</td><td class="num">83%</td><td class="num w">—</td><td>Strength / size</td></tr>
+              <tr data-reps="8"><td>8</td><td class="num">80%</td><td class="num w">—</td><td>Hypertrophy</td></tr>
+              <tr data-reps="9"><td>9</td><td class="num">77%</td><td class="num w">—</td><td>Hypertrophy</td></tr>
+              <tr data-reps="10"><td>10</td><td class="num">75%</td><td class="num w">—</td><td>Hypertrophy</td></tr>
+              <tr data-reps="11"><td>11</td><td class="num">70%</td><td class="num w">—</td><td>Hypertrophy / endurance</td></tr>
+              <tr data-reps="12"><td>12</td><td class="num">70%</td><td class="num w">—</td><td>Hypertrophy / endurance</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="calc-note">Percentages match the load-to-rep table used inside the LiftZone Workouts app, so the weights here line up with what the app prescribes.</p>
+
+        <article class="article">
+          <h2 id="how-it-works">What a one-rep max is — and why you estimate it</h2>
+          <p>Your <strong>one-rep max (1RM)</strong> is the heaviest weight you can lift for a single, full repetition of an exercise. It is the reference point for nearly all strength programming: percentages of your 1RM tell you how heavy to go for strength, hypertrophy, or technique work.</p>
+          <p>The problem is that actually testing a true 1RM is tiring, technically risky, and something you cannot do every week. So instead of maxing out, you <em>estimate</em> your 1RM from a set you already perform — say 100&nbsp;kg for 5 reps — using a validated formula. The estimate updates every time you log a heavier set, so your training weights stay calibrated to your current strength rather than where you were a month ago.</p>
+
+          <h2 id="formula">The formulas this calculator uses</h2>
+          <p>There are several published 1RM equations. This tool uses the two most trusted for moderate rep ranges and averages them — exactly what the LiftZone Workouts app does:</p>
+          <ul>
+            <li><strong>Epley:</strong> 1RM = weight × (1 + reps ÷ 30)</li>
+            <li><strong>Brzycki:</strong> 1RM = weight ÷ (1.0278 − 0.0278 × reps)</li>
+            <li><strong>LiftZone estimate:</strong> the average of the Epley and Brzycki results</li>
+          </ul>
+          <p>For example, a set of <strong>100&nbsp;kg × 5 reps</strong> gives an Epley estimate of about 117&nbsp;kg and a Brzycki estimate of about 113&nbsp;kg — an averaged 1RM of roughly <strong>115&nbsp;kg</strong>. Averaging matters because Epley tends to read slightly high and Brzycki slightly low as reps increase; together they cancel out much of that bias.</p>
+
+          <h2 id="chart">Turning your 1RM into training weights</h2>
+          <p>Once you know your 1RM, the chart above converts it into a target weight for every rep count. Lower reps at higher percentages build maximal strength; moderate reps around 70–80% drive most of your muscle growth; higher reps build work capacity. Plan your heavy days and your back-off sets straight off the table instead of guessing.</p>
+          <p>If you want to know <em>how many</em> sets to do at those weights each week, use the <a href="/tools/volume-calculator/">training volume calculator</a> for evidence-based MEV/MAV/MRV set targets per muscle.</p>
+
+          <h2 id="methodology">Methodology &amp; accuracy</h2>
+          <p>Estimated 1RMs are most reliable from sets of <strong>5 reps or fewer</strong> taken close to failure; accuracy decreases as reps rise because fatigue, technique, and rep cadence introduce more variation. The Epley and Brzycki equations are long-established in strength science and are widely used by coaches and lifting apps. These are the same equations and the same percentage table built into LiftZone Workouts, which recomputes your estimated max from your real logged sets after every session.</p>
+          <p class="calc-note"><strong>Note:</strong> estimates are guidance, not a guarantee — always warm up properly and use a spotter for heavy singles. Last reviewed June 2026.</p>
+
+          <h2 id="faq">Frequently asked questions</h2>
+          <p><strong>Which 1RM formula is most accurate?</strong><br />For most lifters in the 1–10 rep range, the Epley and Brzycki formulas land within a few percent of each other. Averaging them — what this calculator and the LiftZone app do — smooths out their individual bias. Accuracy is highest at low reps (1–5) and drifts as reps climb, because fatigue and technique vary more on high-rep sets.</p>
+          <p><strong>How many reps give the most accurate estimate?</strong><br />Use a hard set of about 5 reps or fewer, taken close to failure. The fewer the reps, the more accurate the estimate. Sets above 10–12 reps tend to overestimate your true one-rep max.</p>
+          <p><strong>What is the %1RM chart for?</strong><br />It converts your estimated 1RM into target weights for every rep range, so you can load strength work (about 85–100%), hypertrophy work (about 70–80%) and back-off sets correctly instead of guessing.</p>
+          <p><strong>Does RPE change the estimate?</strong><br />Yes. If a set was not taken to failure, your true max is higher than the raw numbers suggest. Entering an RPE adds the estimated reps in reserve (10 minus RPE) before applying the formula, giving a more honest 1RM.</p>
+          <p><strong>Should I test a true one-rep max instead?</strong><br />Occasionally, with full warm-ups and a spotter, experienced lifters can test a true max. But an estimate from your normal working sets is safer, repeatable, and updates every session — which is how LiftZone keeps your prescribed weights calibrated to your current strength.</p>
+
+          <div class="cta-box">
+            <p>LiftZone estimates your 1RM from every set you log, then programs your weights, sets and deloads automatically — on iPhone and Apple Watch.</p>
+            <a href="https://apps.apple.com/app/liftzone-workouts-gym-planner/id6742913519" class="cta-btn" target="_blank" rel="noopener noreferrer">Download LiftZone Workouts</a>
+          </div>
+
+          <div class="related">
+            <h3>More free tools &amp; reading</h3>
+            <a href="/tools/volume-calculator/">Training Volume Calculator (MEV / MAV / MRV)</a>
+            <a href="/blog/how-ai-builds-your-workout-plan/">How LiftZone builds your workout plan</a>
+            <a href="/tools/">All free fitness tools</a>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container narrow">
+        <p>&copy; 2026 LiftZone Workouts &middot; <a href="/">Home</a> &middot; <a href="/tools/">Tools</a> &middot; <a href="/blog/">Blog</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="mailto:support@liftzoneworkouts.com">Contact</a></p>
+      </div>
+    </footer>
+
+    <script type="module" src="/tools/one-rep-max-calculator/calc.js"></script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+/* ════════════════════════════════════════════════════════════════
+   LiftZone Workouts — free tools (.calc) component layer.
+   Loaded AFTER /static.css; reuses its tokens (--accent, --surface,
+   --line, --ink, --muted, --faint, --ink-soft) and the
+   cubic-bezier(0.16,1,0.3,1) easing. Warm-glass, light theme.
+   ════════════════════════════════════════════════════════════════ */
+
+/* ── Breadcrumb ─────────────────────────────────────────────────── */
+.crumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 0.5rem; padding-top: 7.5rem; font-size: 0.8rem; color: var(--faint); }
+@media (min-width: 768px) { .crumbs { padding-top: 9rem; } }
+.crumbs a { color: var(--muted); transition: color 0.2s; }
+.crumbs a:hover { color: var(--accent); }
+.crumbs .sep { opacity: 0.5; }
+.crumbs .here { color: var(--ink); }
+
+/* a hero that follows the breadcrumb needs less top padding */
+.hero.tool { padding-top: 1.25rem; }
+
+/* ── The calculator widget ──────────────────────────────────────── */
+.calc {
+  margin-top: 2rem; border-radius: 1.5rem; padding: 1.75rem;
+  background: rgba(255, 255, 255, 0.62);
+  -webkit-backdrop-filter: blur(20px) saturate(170%); backdrop-filter: blur(20px) saturate(170%);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85), 0 10px 40px rgba(30, 40, 70, 0.1);
+}
+@media (min-width: 768px) { .calc { padding: 2.25rem; } }
+
+.calc-grid { display: grid; gap: 1.1rem; grid-template-columns: 1fr; align-items: end; }
+@media (min-width: 560px) { .calc-grid { grid-template-columns: 1fr 1fr; } }
+
+.calc-field { display: flex; flex-direction: column; gap: 0.45rem; }
+.calc-field > label { font-size: 0.8rem; font-weight: 600; color: var(--ink-soft); }
+.calc-field input[type="number"], .calc-field select {
+  width: 100%; font-family: var(--font-sans); font-size: 1.1rem; font-weight: 600; color: var(--ink);
+  padding: 0.8rem 0.95rem; border-radius: 0.85rem; background: var(--surface);
+  border: 1px solid var(--line); -webkit-appearance: none; appearance: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.calc-field input[type="number"]:focus, .calc-field select:focus {
+  outline: none; border-color: var(--accent-bright); box-shadow: 0 0 0 4px rgba(46, 134, 240, 0.14);
+}
+
+/* ── Segmented toggle (units / level / sex) ─────────────────────── */
+.seg { display: inline-flex; padding: 0.25rem; gap: 0.25rem; border-radius: 0.85rem; background: rgba(22, 24, 32, 0.05); border: 1px solid var(--line); }
+.seg button {
+  font-family: var(--font-sans); font-size: 0.9rem; font-weight: 600; color: var(--muted);
+  padding: 0.55rem 1.05rem; border-radius: 0.65rem; background: transparent; border: none; cursor: pointer;
+  transition: color 0.2s, background 0.3s, box-shadow 0.3s;
+}
+.seg button[aria-checked="true"] {
+  color: #fff; background: linear-gradient(135deg, #4a9bff, #2e86f0 60%, #5cb6ff);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.5), 0 4px 12px rgba(46, 134, 240, 0.3);
+}
+.seg button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ── Result readout ─────────────────────────────────────────────── */
+.calc-result { margin-top: 1.6rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.5rem 1.2rem; padding-top: 1.4rem; border-top: 1px solid var(--line); }
+.calc-result .big {
+  font-family: var(--font-display); font-weight: 700; letter-spacing: -0.03em;
+  font-size: clamp(2.4rem, 7vw, 3.4rem); line-height: 1;
+  background: linear-gradient(115deg, #2e86f0, #4fb6e8 48%, #59cdbf);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.calc-result .unit { font-size: 1.1rem; font-weight: 600; color: var(--muted); }
+.calc-result .cap { flex-basis: 100%; font-size: 0.85rem; color: var(--faint); }
+
+/* ── Action buttons ─────────────────────────────────────────────── */
+.calc-actions { margin-top: 1.4rem; display: flex; flex-wrap: wrap; align-items: center; gap: 0.7rem; }
+.btn-soft {
+  display: inline-flex; align-items: center; gap: 0.5rem; font-family: var(--font-sans);
+  font-size: 0.9rem; font-weight: 600; color: var(--ink); padding: 0.65rem 1.2rem; border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.72); border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.95), 0 6px 18px rgba(20, 30, 60, 0.1);
+  cursor: pointer; transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s;
+}
+.btn-soft:hover { transform: translateY(-2px); box-shadow: inset 0 1px 1px rgba(255, 255, 255, 1), 0 12px 28px rgba(20, 30, 60, 0.14); }
+.btn-soft:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.calc-status { font-size: 0.85rem; font-weight: 600; color: var(--accent); }
+
+/* ── Data / result tables ───────────────────────────────────────── */
+.calc-table-wrap { margin-top: 1.5rem; overflow-x: auto; border-radius: 1rem; border: 1px solid var(--line); background: var(--surface); box-shadow: 0 1px 2px rgba(20, 30, 60, 0.04), 0 14px 44px rgba(20, 30, 60, 0.05); }
+table.calc-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; min-width: 340px; }
+table.calc-table th, table.calc-table td { padding: 0.7rem 0.95rem; text-align: left; }
+table.calc-table thead th { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--faint); font-weight: 700; border-bottom: 1px solid var(--line); }
+table.calc-table tbody tr + tr td { border-top: 1px solid var(--line); }
+table.calc-table td.num, table.calc-table th.num { text-align: right; font-variant-numeric: tabular-nums; }
+table.calc-table tbody tr:hover { background: rgba(46, 134, 240, 0.04); }
+table.calc-table .hl { color: var(--accent); font-weight: 700; }
+
+/* ── Volume zone cards (MEV / MAV / MRV) ────────────────────────── */
+.zone { margin-top: 1.6rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; }
+.zone .z { border-radius: 1rem; padding: 1.1rem 0.9rem; text-align: center; background: var(--surface); border: 1px solid var(--line); }
+.zone .z .k { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.07em; font-weight: 700; color: var(--faint); }
+.zone .z .v { margin-top: 0.35rem; font-family: var(--font-display); font-weight: 700; font-size: 1.7rem; letter-spacing: -0.02em; color: var(--ink); }
+.zone .z .d { margin-top: 0.2rem; font-size: 0.74rem; line-height: 1.4; color: var(--muted); }
+.zone .z.mev .v { color: #3a8f6f; }
+.zone .z.mav .v { color: var(--accent); }
+.zone .z.mrv .v { color: #c2603a; }
+
+/* ── Small note / disclaimer ────────────────────────────────────── */
+.calc-note { margin-top: 1rem; font-size: 0.82rem; line-height: 1.6; color: var(--faint); }
+.calc-note strong { color: var(--muted); }
+
+/* ── Tools hub cards: make the whole card a link ────────────────── */
+a.card { text-decoration: none; }
+a.card .card-go { margin-top: auto; padding-top: 1rem; font-size: 0.85rem; font-weight: 600; color: var(--accent); display: inline-flex; align-items: center; gap: 0.4rem; }
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-soft, .seg button { transition: none; }
+}
