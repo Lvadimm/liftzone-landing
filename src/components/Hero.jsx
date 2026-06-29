@@ -1,104 +1,185 @@
-import { FadeUp } from "./AnimatedSection";
+import { motion } from "framer-motion";
+import { Sparkles, Flame, ScanLine, Award, Heart } from "lucide-react";
+import { FadeUp, Parallax } from "./AnimatedSection";
+import GlassButton, { AppleIcon } from "./GlassButton";
+
+const APP_URL =
+  "https://apps.apple.com/app/liftzone-workouts-gym-planner/id6742913519";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-svh flex-col overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 z-0">
-        <div className="h-full w-full bg-gradient-to-b from-[#252525] via-bg to-bg" />
-        <div className="absolute top-[18%] left-1/3 h-[36rem] w-[36rem] -translate-x-1/2 rounded-full bg-accent/[0.04] blur-[120px]" />
-        <div className="absolute bottom-[10%] right-[10%] h-[24rem] w-[24rem] rounded-full bg-accent/[0.03] blur-[100px]" />
+    <section id="top" className="relative overflow-hidden pt-32 pb-12 md:pt-40 md:pb-20">
+      {/* Mesh orbs */}
+      <div className="pointer-events-none absolute inset-0 -z-10">
+        <div className="absolute -top-24 left-[12%] h-[30rem] w-[30rem] animate-orb rounded-full bg-[#ffd9c2]/60 blur-[110px]" />
+        <div className="absolute top-[6%] right-[8%] h-[26rem] w-[26rem] animate-orb rounded-full bg-[#cfe4ff]/70 blur-[120px] [animation-delay:-6s]" />
+        <div className="absolute top-[42%] left-1/2 h-[24rem] w-[24rem] -translate-x-1/2 animate-orb rounded-full bg-[#d6f4ec]/60 blur-[120px] [animation-delay:-11s]" />
+        <div className="absolute inset-0 bg-grid opacity-60" />
       </div>
 
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 z-[1] bg-gradient-to-t from-bg via-bg/60 to-transparent" />
+      <div className="mx-auto max-w-[82rem] px-5 md:px-8">
+        {/* Eyebrow */}
+        <FadeUp className="flex justify-center">
+          <a
+            href="#weekly"
+            className="glass group inline-flex items-center gap-2 rounded-full py-1.5 pl-2 pr-4 text-sm"
+          >
+            <span className="inline-flex items-center gap-1 rounded-full bg-accent px-2.5 py-0.5 text-xs font-semibold text-white">
+              <Sparkles size={12} /> New
+            </span>
+            <span className="font-medium text-ink-soft">AI Weekly Report &amp; live Apple Watch coaching</span>
+            <span className="text-faint transition-transform group-hover:translate-x-0.5">→</span>
+          </a>
+        </FadeUp>
 
-      {/* Mobile image — sits at the top, below the navbar */}
-      <FadeUp className="relative z-10 flex justify-center pt-28 pb-2 md:hidden">
-        <img
-          src={`${import.meta.env.BASE_URL}hero-phones.png`}
-          alt="LiftZone Workouts app screens"
-          className="max-h-[260px] w-full object-contain drop-shadow-2xl"
-        />
-      </FadeUp>
+        {/* Headline */}
+        <FadeUp delay={1} className="mx-auto mt-7 max-w-4xl text-center">
+          <h1 className="text-[clamp(2.7rem,7vw,5.3rem)] leading-[0.98] font-semibold tracking-[-0.035em] text-ink">
+            Train smarter.{" "}
+            <span className="serif text-gradient-accent italic">Eat better.</span>{" "}
+            <span className="text-ink/40">See results.</span>
+          </h1>
+        </FadeUp>
 
-      {/* Content — pushed to bottom on desktop, normal flow on mobile */}
-      <div className="relative z-10 mt-auto w-full px-5 pb-16 md:px-10 md:pb-24">
-        <div className="mx-auto grid max-w-[80rem] items-end gap-8 md:grid-cols-2">
+        <FadeUp delay={2} className="mx-auto mt-6 max-w-2xl text-center">
+          <p className="text-[clamp(1.05rem,2vw,1.3rem)] leading-[1.5] text-muted">
+            Know exactly what to lift, see what you&apos;re really eating, and get coached
+            from your wrist — with{" "}
+            <span className="font-medium text-ink">a plan that pushes you further every week</span>.
+          </p>
+        </FadeUp>
 
-          {/* Left — text */}
-          <div>
-            <FadeUp>
-              <h1 className="text-[clamp(2.75rem,6vw,4.5rem)] leading-[1.08] font-semibold tracking-[-0.02em]">
-                Train smarter.{" "}
-                <span className="text-white/45">Eat better.</span>{" "}
-                <span className="text-white/45">See results.</span>
-              </h1>
-            </FadeUp>
+        {/* CTAs */}
+        <FadeUp delay={3} className="mt-9 flex flex-col items-center justify-center gap-3.5 sm:flex-row">
+          <GlassButton href={APP_URL} variant="primary" size="lg" icon={<AppleIcon size={19} />}>
+            Download Free
+          </GlassButton>
+          <GlassButton href="#features" variant="light" size="lg" external={false}>
+            Explore features
+          </GlassButton>
+        </FadeUp>
 
-            <FadeUp delay={1}>
-              <p className="mt-5 max-w-lg text-[clamp(1rem,1.8vw,1.25rem)] leading-[1.5] font-medium text-white/55">
-                LiftZone Workouts plans your training, scans your meals, and
-                tracks every rep — so you can focus on showing up.
-              </p>
-            </FadeUp>
+        <FadeUp delay={4} className="mt-5 text-center">
+          <p className="text-sm text-faint">
+            Free forever · 2 weeks of Pro included · No account required
+          </p>
+        </FadeUp>
 
-            <FadeUp delay={2}>
-              <div className="mt-8 flex flex-wrap items-center gap-4">
-                <a
-                  href="https://apps.apple.com/app/liftzone-workouts-gym-planner/id6742913519"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="liquid-glass inline-flex items-center gap-2.5 rounded-full px-8 py-4 text-base font-semibold text-white"
-                >
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-                  </svg>
-                  Download Free
-                </a>
-                <a
-                  href="#features"
-                  className="glass-button inline-flex items-center gap-2 rounded-full px-7 py-4 text-base font-medium text-white/70"
-                >
-                  Explore Features
-                </a>
-              </div>
-            </FadeUp>
+        {/* Trust pills */}
+        <FadeUp delay={5} className="mt-7 flex flex-wrap items-center justify-center gap-2.5">
+          {["280+ exercises", "50+ programs", "Apple Watch", "HealthKit", "Privacy-first"].map((t) => (
+            <span
+              key={t}
+              className="rounded-full border border-line bg-white/50 px-3.5 py-1.5 text-xs font-medium text-ink-soft backdrop-blur-sm"
+            >
+              {t}
+            </span>
+          ))}
+        </FadeUp>
 
-            <FadeUp delay={3}>
-              <p className="mt-6 text-sm text-white/30">
-                Free forever. 2 weeks of Pro included. No account required.
-              </p>
-            </FadeUp>
+        {/* Device cluster */}
+        <div className="relative mt-16 flex items-end justify-center md:mt-20">
+          {/* soft glow */}
+          <div className="pointer-events-none absolute bottom-10 left-1/2 h-72 w-[44rem] max-w-[90vw] -translate-x-1/2 rounded-full bg-accent/12 blur-[90px]" />
 
-            <FadeUp delay={4}>
-              <div className="mt-8 flex items-center gap-4">
-                <StatPill label="200+ exercises" />
-                <StatPill label="50+ programs" />
-                <StatPill label="Apple Watch" />
-              </div>
-            </FadeUp>
-          </div>
-
-          {/* Right — desktop only */}
-          <FadeUp delay={2} className="hidden md:flex md:items-end md:justify-center">
-            <img
-              src={`${import.meta.env.BASE_URL}hero-phones.png`}
-              alt="LiftZone Workouts app screens"
-              className="w-full max-w-[620px] animate-float object-contain drop-shadow-2xl"
+          {/* Left phone */}
+          <Parallax speed={48} className="hidden md:block">
+            <motion.img
+              initial={{ opacity: 0, y: 40, rotate: -6 }}
+              whileInView={{ opacity: 1, y: 0, rotate: -7 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.25 }}
+              src={`${import.meta.env.BASE_URL}hero-nutrition.png`}
+              alt="Calorie and macro tracking"
+              className="animate-float-slow w-[218px] translate-x-10 translate-y-8 drop-shadow-[0_30px_60px_rgba(30,40,70,0.22)]"
             />
-          </FadeUp>
+          </Parallax>
 
+          {/* Center phone */}
+          <Parallax speed={80} className="z-10">
+            <motion.img
+              initial={{ opacity: 0, y: 60, scale: 0.96 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.05, ease: [0.16, 1, 0.3, 1], delay: 0.12 }}
+              src={`${import.meta.env.BASE_URL}hero-workout.png`}
+              alt="Guided workout with exercise video and set logging"
+              className="animate-float w-[260px] drop-shadow-[0_40px_80px_rgba(30,40,70,0.28)] md:w-[300px]"
+            />
+          </Parallax>
+
+          {/* Right phone */}
+          <Parallax speed={48} className="hidden md:block">
+            <motion.img
+              initial={{ opacity: 0, y: 40, rotate: 6 }}
+              whileInView={{ opacity: 1, y: 0, rotate: 7 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.35 }}
+              src={`${import.meta.env.BASE_URL}hero-goals.png`}
+              alt="Daily activity goals"
+              className="animate-float-slow w-[218px] -translate-x-10 translate-y-8 drop-shadow-[0_30px_60px_rgba(30,40,70,0.22)] [animation-delay:-3s]"
+            />
+          </Parallax>
+
+          {/* Floating glass chips — each quotes a real screen in the app */}
+
+          {/* Camera meal scan — the food scanner result */}
+          <FloatingChip
+            className="absolute left-[5%] top-[17%] hidden lg:flex"
+            icon={<ScanLine size={15} className="text-accent" />}
+            title="92% match"
+            sub="Full English · 1,200 cal"
+            delay={0.6}
+          />
+
+          {/* Strength PR — estimated 1RM tracking */}
+          <FloatingChip
+            className="absolute left-[2%] top-[60%] hidden lg:flex"
+            icon={<Award size={15} className="text-[#f5a524]" />}
+            title="New PR"
+            sub="Bench Press · Est. 1RM"
+            delay={0.78}
+          />
+
+          {/* Apple Watch live heart rate */}
+          <FloatingChip
+            className="absolute right-[6%] top-[15%] hidden lg:flex"
+            icon={<Heart size={14} fill="currentColor" className="text-[#ff3b30]" />}
+            title="128 bpm"
+            sub="Apple Watch · Fat Burn"
+            delay={0.68}
+          />
+
+          {/* LZ Power — signature training score */}
+          <FloatingChip
+            className="absolute right-[4%] top-[58%] hidden lg:flex"
+            icon={<Flame size={15} className="text-[#ff7a45]" />}
+            title="+36 LZ Power"
+            sub="this session"
+            delay={0.86}
+          />
         </div>
       </div>
     </section>
   );
 }
 
-function StatPill({ label }) {
+function FloatingChip({ className = "", icon, title, sub, delay = 0 }) {
   return (
-    <span className="rounded-full border border-white/[0.06] bg-white/[0.03] px-4 py-2 text-xs font-medium tracking-wide text-white/40">
-      {label}
-    </span>
+    <motion.div
+      initial={{ opacity: 0, y: 18, scale: 0.92 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay }}
+      className={`glass-strong animate-float items-center gap-3 rounded-2xl py-2.5 pl-2.5 pr-4 ${className}`}
+    >
+      <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-white shadow-sm">
+        {icon}
+      </span>
+      <span className="leading-tight">
+        <span className="block text-sm font-semibold text-ink">{title}</span>
+        <span className="block text-xs text-muted">{sub}</span>
+      </span>
+    </motion.div>
   );
 }
