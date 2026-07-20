@@ -7,7 +7,6 @@ const APP_URL =
 
 const freeFeatures = [
   "280+ exercises with video guides",
-  "50+ coach-built programs to follow",
   "Workout tracking with full history",
   "Apple Watch — live sync, works offline",
   "Calorie & macro logging with barcode scan",

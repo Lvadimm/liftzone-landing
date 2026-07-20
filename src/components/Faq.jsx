@@ -6,7 +6,7 @@ import { FadeUp } from "./AnimatedSection";
 const faqs = [
   {
     q: "Is LiftZone really free?",
-    a: "Yes. Workout tracking, the 280+ exercise library with video, 50+ coach-built programs, your customizable dashboard, Apple Watch sync, calorie and macro logging, progress photos and PRs — all free forever, with no account and no expiry. Pro adds the AI tools — your auto-built adaptive plan, the photo food scanner, voice logging, and a written Weekly Report — with a 2-week free trial.",
+    a: "Yes. Workout tracking, the 280+ exercise library with video, your customizable dashboard, Apple Watch sync, calorie and macro logging, progress photos and PRs — all free forever, with no account and no expiry. Pro adds the AI tools — your auto-built adaptive plan, the photo food scanner, voice logging, and a written Weekly Report — with a 2-week free trial.",
   },
   {
     q: "Do I need an Apple Watch?",
